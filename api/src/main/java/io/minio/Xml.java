@@ -73,7 +73,7 @@ public class Xml {
    * This validate method will validate the contents of the XML document against the specified XML
    * class schema.
    */
-  public static boolean validate(Class type, String source) throws XmlParserException {
+  public static boolean validate(Class<?> type, String source) throws XmlParserException {
     try {
       Serializer serializer = new Persister(new AnnotationStrategy());
       return serializer.validate(type, source);
